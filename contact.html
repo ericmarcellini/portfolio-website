@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" type="image/png" href="img/favicono.png" sizes="16x16" />
+    <link rel="stylesheet" type="text/css" href="css/normalize.css">
+    <link rel="stylesheet" type="text/css" href="css/style.production.css">
+    <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro:400,900|Source+Sans+Pro:300,900&display=swap" rel="stylesheet">
+    <title>Eric's Portfolio Website</title>
+</head>
+
+<header class="page-header">
+  <img src="img/logo.png" class="page-header__item" alt="Eric Marcellini Logo">
+    <nav class="page-header__item" >
+      <ul role="menubar" class="navigation-list">
+        <li role="presentation">
+          <a href="index.html" role="menuitem" class="navigation-list__item navigation-list__item--active">Home</a>
+        </li>
+        <li role="presentation">
+          <a href="about.html" role="menuitem" class="navigation-list__item">About</a>
+        </li>
+        <li role="presentation">
+          <a href="contact.html" role="menuitem" class="navigation-list__item">Contact</a>
+        </li>
+        <li role="presentation">
+          <a href="work.html" role="menuitem" class="navigation-list__item">Work</a>
+        </li>
+      </ul>
+    </nav>
+</header>
+
+    <body>
+        <main>
+            <h1>Contact me</h1>
+                <a href="tel:+1 12345678">Telephone +1 12345678</a><br>
+                 <a href="easydelac">Skype: easydelac</a><br>
+                <a href="mailto:ericmarcellini@gmail.com">ericmarcellini@gmail.com</a><br>
+                <a href="mailto:ericmarcellini@gmail.com">Contact me</a>
+                <br>
+        </main>
+        <div class="form1">
+          <form action="" method="post">
+            <label class="standard-label" for="contact-email">Email: </label>
+            <input type="email" id="contact-email" required>
+          
+            <label for="contact-phone">Telephone: </label>
+            <input type="tel" id="contact-phone" pattern="\d{3}[\-]\d{3}[\-]\d{4}">
+          
+            <label for="msgarea">Message: </label>
+            <textarea maxlength="240" id="msgarea" required></textarea>
+            <br>
+            <input class="button2" type="submit" value="Send message">
+          </form>
+        </div>
+          <footer class="page-footer">
+            <div class="social-media">
+              <p>Find me on</p>
+              <img src="img/iconfinder_github_291716.svg" alt="Github">
+              <img src="img/twitter.svg" alt="Twitter">
+              <img src="img/iconfinder_LinkedIn_570628.svg" alt="LinkedIn">
+            </div>
+          </footer>
+       <script src="js/tota11y.min.js"></script>
+</body>
+
+</html>
