@@ -251,7 +251,7 @@ input[type=submit]{
 }
 
 label {
-  padding: 12px auto;
+  padding: 12px;
   display: inline-block;
   color: #16e0bd;
   display: block;
