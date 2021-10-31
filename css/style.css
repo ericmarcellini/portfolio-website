@@ -46,8 +46,8 @@ body {
     text-align: left;
 }
 
-h1 {
-    color: var(--clr-accent);
+h1, h2 {
+    color: var(--clr-light);
     font-size: 3.5rem;
 
 }
