@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="icon" type="image/png" href="img/favicono.png" sizes="16x16" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="css/normalize.css">
     <link rel="stylesheet" type="text/css" href="css/style.production.css">
     <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro:400,900%7CSource+Sans+Pro:300,900&display=swap" rel="stylesheet">
@@ -48,10 +49,11 @@
         <!-- <button class="button1">Check out my code!</button> -->
         <section>
           <h1>My Projects</h1>
-          <div class="grid">
-  
-            <div class="grid__item">
+          <div class="container">
+            <div class="row">
+            <div class="col-sm">
               <h2>myFlix</h2>
+              <img src="./img/placeholder.png" class="img-fluid" alt="Responsive image">
               <p>
                 Using React-Bootstrap, built the client-side for an application called myFlix based on its my existing server-side code (REST API and database).
                 This application uses MERN Stack.
@@ -59,8 +61,9 @@
               <a href="https://github.com/ericmarcellini/myFlix-client">See project on GitHub</a>
             </div>
   
-            <div class="grid__item">
+            <div class="col-sm">
                 <h2>PokeDex</h2>
+                <img src="./img/pkm1.jpg" class="img-fluid" alt="Responsive image">
               <p>
                 Small webapp based in the popular videogame Pokemon. It's an online pokedex containing the first 150 Pokemon.
                 Uses HTML + CSS + Javascript and is connected to an existing API.
@@ -68,17 +71,18 @@
               <a href="https://github.com/ericmarcellini/pokedex">See project on GitHub</a>
             </div>
   
-              <div class="grid__item">
-                <h2>Meet App</h2>
+            <div class="col-sm">
+              <h2>Meet App</h2>
+              <img src="./img/ma1.png" class="img-fluid" alt="Responsive image">
               <p>
                 Serverless, progressive web application built with ReactJS using a test-driven development.
                 This app uses the Google Calendar API to fetch upcoming requests.
              </p>
-              <a href="https://github.com/ericmarcellini/meet">See project on GitHub</a>
-              <a href="https://ericmarcellini.github.io/meet/">Live Project</a>
+              <a href="https://github.com/ericmarcellini/meet">See project on GitHub</a> <br>
+              <button href="https://ericmarcellini.github.io/meet/">Live Project</button>
               </div>
-  
-          </div>
+            </div>
+          </container>
       </main>
       <footer class="page-footer">
         <div class="social-media">

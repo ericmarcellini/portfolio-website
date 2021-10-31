@@ -15,6 +15,17 @@
   border-radius: 50%;
 }
 
+.photo > img {
+  object-fit: cover;
+  width: 100%;
+  max-height: 100%;
+}
+
+.photo>img {
+  object-fit: cover;
+  display: inline-block;
+  width: 33%;
+}
 /* Text Bodies*/
 main{
   text-align: center;
