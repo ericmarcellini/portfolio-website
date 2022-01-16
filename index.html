@@ -14,23 +14,30 @@
 </head>
 
 <body>
-    <header class="page-header">
-      <img src="img/logo.png" class="page-header__item" alt="Eric Marcellini Logo">
-       <nav class="page-header__item" >
-          <ul role="menubar" class="navigation-list">
-            <li role="presentation">
-              <a href="" role="menuitem" class="navigation-list__item navigation-list__item--active">About</a>
-            </li>
-            <li role="presentation">
-              <a href="" role="menuitem" class="navigation-list__item">Projects</a>
-            </li>
-            <li role="presentation">
-              <a href="" role="menuitem" class="navigation-list__item">Contact</a>
-            </li> 
-          </ul> 
-        </nav> 
-    </header>
+  <nav class="navbar sticky-top navbar-expand-lg navbar-dark bg-dark">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">
+        <h2>Eric Marcellini</h2>
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Projects</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#">Contact</a>
+          </li>
 
+        </ul>
+      </div>
+    </div>
+  </nav>
     
       <main class="profile">
         <img id="mainimg" src="img/me.png" alt="Photo of Eric">
@@ -45,64 +52,70 @@
           in creating high-quality software. What started with a simple "Hello World" has become a full-fledged passion that only gets more exciting as time
           goes by.
           </p>
-            <button class="button1"> Download my CV</button>
+            <a href="img/Eric Marcellini 11622.pdf"><button class="button1"> Download my CV</button> </a>
             <br><br><br>
           <div class="social-media">
             <a href="https://github.com/ericmarcellini"><img src="img/iconfinder_github_291716.svg" alt="Github"></a>
             <a href="https://twitter.com/EricLearnsCode"><img src="img/twitter.svg" alt="Twitter" > </a>
             <a href=""><img src="img/iconfinder_LinkedIn_570628.svg" alt="LinkedIn"></a>
-            <br>
-            <a href="mailto:ericmarcellini@gmail.com">Contact me</a>
+            <a href="mailto:ericmarcellini@gmail.com"><img src="img/6214507_email_envelope_gmail_letter_logo_icon(1).svg" alt="email"> </a>
           </div>
           <br><br>
-          <section>
-            <h3>Tech Stack</h3>
-            <div class="container tech">
-              <div class="row">
-                <span class="badge badge-pill badge-secondary">Javascript</span>
-                <span class="badge badge-pill badge-secondary">Bootstrap</span>
-                <span class="badge badge-pill badge-secondary">React</span>
-                <span class="badge badge-pill badge-secondary">Html</span>
-                <span class="badge badge-pill badge-secondary">Css</span>
-                <span class="badge badge-pill badge-secondary">Sass</span>
-                <span class="badge badge-pill badge-secondary">Git</span>
-                <span class="badge badge-pill badge-secondary">Node</span>
-                <span class="badge badge-pill badge-secondary">MongoDB</span>
-                <span class="badge badge-pill badge-secondary">AWS</span>
-                <span class="badge badge-pill badge-secondary">Serverless</span>
-                <span class="badge badge-pill badge-secondary">Firebase</span>
-                <span class="badge badge-pill badge-secondary">jQuery</span>
-                <span class="badge badge-pill badge-secondary">TypeScript</span>
-              </div>
-            </div>
-            <br><br>
-        </section>
-        <p>
-          Bellow you'll find projects I've completed that showcase my skills and general background in developing software.
-        </p>
-       </main> 
+
+       </main>
+       <section class="techstack">
+       <h3>my Tech Stack</h3> 
+       <section id="dev-skills">
+        <span class="devskills-tag">react</span>
+        <span class="devskills-tag">javascript</span>
+        <span class="devskills-tag">bootstrap</span>
+        <span class="devskills-tag">html</span>
+        <span class="devskills-tag">css</span>
+        <span class="devskills-tag">sass</span>
+        
+        <span class="devskills-tag">NodeJS</span>
+        <span class="devskills-tag">git</span>
+        <span class="devskills-tag">node</span>
+        <span class="devskills-tag">mongodb</span>
+        <span class="devskills-tag">express</span>  
+        <span class="devskills-tag">aws</span>
+        <span class="devskills-tag">serverless</span>
+        <span class="devskills-tag">firebase</span>
+        <span class="devskills-tag">typescript</span>
+      </section>
+      </section>
         <section class="work">
           <h1>My Projects</h1>
+          <p>
+            Bellow you'll find projects I've completed that showcase my skills and general background in developing software.
+          </p>
           <div class="container-fluid">
           <div class="card-deck">
             <div class="card text-white bg-dark col-sm-6" >
               <img class="card-img-top" src="./img/phone.png" alt="phone demo screenshot">
               <div class="card-header">ChatApp</div>
               <div class="card-body">
-                <h5 class="card-title">Dark card title</h5>
+                <span class="badge badge-pill badge-secondary">React-Native</span>
+                <span class="badge badge-pill badge-secondary">Google Firebase</span>
+                <span class="badge badge-pill badge-secondary">Firestore Database</span>
                 <p class="card-text">Using React-Native, built a texting application for both IOS & Android. It has functions like being able to take a picture or video,
                   send a photo or video from your gallery or sending your GPS location </p>
               </div>    
                   <div class="footer">
                     <a href="https://github.com/ericmarcellini/Chat-App" class="btn btn-primary">Check my code</a>
+                    <a href="casestudy.html" class="btn btn-outline-info">Case study</a>
                   </div>
             </div>
 
-            <div class="card text-white bg-dark col-sm-6"" >
+            <div class="card text-white bg-dark col-sm-6" >
               <img class="card-img-top" src="./img/reactmyflix.png" alt="demo screenshot">
               <div class="card-header">myFlix React</div>
               <div class="card-body">
-                <h5 class="card-title">Dark card title</h5>
+                <span class="badge badge-pill badge-secondary">MongoDB</span>
+                <span class="badge badge-pill badge-secondary">Express</span>
+                <span class="badge badge-pill badge-secondary">React</span>
+                <span class="badge badge-pill badge-secondary">Node</span>
+                <span class="badge badge-pill badge-secondary">Javascript</span>
                 <p class="card-text">Using React-Bootstrap, built the client-side for an application called myFlix based on its my existing server-side code (REST API and database).
                   This application uses MERN (MongoDB, Express, ReactJS, NodeJS) Stack. </p>
               </div>    
@@ -111,11 +124,15 @@
               </div>    
             </div>
 
-            <div class="card text-white bg-dark col-sm-6"" >
+            <div class="card text-white bg-dark col-sm-6" >
               <img class="card-img-top" src="./img/angularmyflix.png" alt="demo screenshot">
               <div class="card-header">myFlix Angular</div>
               <div class="card-body">
-                <h5 class="card-title">Dark card title</h5>
+                <span class="badge badge-pill badge-secondary">MongoDB</span>
+                <span class="badge badge-pill badge-secondary">Express</span>
+                <span class="badge badge-pill badge-secondary">Angular</span>
+                <span class="badge badge-pill badge-secondary">Node</span>
+                <span class="badge badge-pill badge-secondary">TypeScript</span>
                 <p class="card-text">Using Angular, built the client-side for an application called myFlix based on its my existing server-side code (REST API and database).
                   This application uses MEAN (MongoDB, Express, AngularJS, NodeJS) Stack. </p>
                 </div>  
@@ -130,7 +147,9 @@
               <img class="card-img-top" src="./img/pkm1.jpg" alt="demo screenshot">
               <div class="card-header">PokeDex</div>
               <div class="card-body">
-                <h5 class="card-title">Dark card title</h5>
+                <span class="badge badge-pill badge-secondary">Javascript</span>
+                <span class="badge badge-pill badge-secondary">Html</span>
+                <span class="badge badge-pill badge-secondary">Css</span>
                 <p class="card-text">Small webapp based in the popular videogame Pokemon. It's an online pokedex containing the first 150 Pokemon.
                   Uses HTML + CSS + Javascript and is connected to an existing API. </p>
               </div>    
@@ -144,7 +163,12 @@
               <img class="card-img-top" src="./img/ma1.png" alt="demo screenshot">
               <div class="card-header">MeetApp</div>
               <div class="card-body">
-                <h5 class="card-title">Dark card title</h5>
+                <span class="badge badge-pill badge-secondary">React</span>
+                <span class="badge badge-pill badge-secondary">PWA</span>
+                <span class="badge badge-pill badge-secondary">Serverless</span>
+                <span class="badge badge-pill badge-secondary">Bootstrap</span>
+                <span class="badge badge-pill badge-secondary">Html</span>
+                <span class="badge badge-pill badge-secondary">Css</span>
                 <p class="card-text">Serverless, progressive web application built with ReactJS using a test-driven development.
                   This app uses the Google Calendar API to fetch upcoming requests. </p>
               </div>
@@ -157,7 +181,9 @@
               <img class="card-img-top" src="./img/pfw.png" alt="demo screenshot">
               <div class="card-header">This Portfolio site</div>
               <div class="card-body">
-                <h5 class="card-title">Dark card title</h5>
+                <span class="badge badge-pill badge-secondary">Bootstrap</span>
+                <span class="badge badge-pill badge-secondary">Html</span>
+                <span class="badge badge-pill badge-secondary">Css</span>
                 <p class="card-text">This portfolio website was built using only HTML & CSS as well as some CSS Flexbox & Bootstrap </p>
               </div>
               <div class="footer">  
@@ -183,11 +209,15 @@
       <br><br><br>    
       <footer class="page-footer">
         <div class="social-media">
-          <p>Find me on</p>
+          <h1>Contact me</h1>
+          
+          <h3>Eric Marcellini</h3>
+          
+          <h3>Berlin, Germany</h3>
           <a href="https://github.com/ericmarcellini"><img src="img/iconfinder_github_291716.svg" alt="Github"></a>
           <a href="https://twitter.com/EricLearnsCode"><img src="img/twitter.svg" alt="Twitter" > </a>
           <a href=""><img src="img/iconfinder_LinkedIn_570628.svg" alt="LinkedIn"></a>
-          <a href="mailto:ericmarcellini@gmail.com">Contact me</a>
+          <a href="mailto:ericmarcellini@gmail.com"><img src="img/6214507_email_envelope_gmail_letter_logo_icon(1).svg" alt="email"> </a>
         </div>
       </footer>
       <br>
