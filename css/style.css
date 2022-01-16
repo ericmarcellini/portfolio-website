@@ -31,6 +31,13 @@ main{
   text-align: center;
 }
 
+.work{
+  margin: 0 auto;
+  text-align: center;
+}
+
+
+
 #highlight{
   color: var(--clr-accent);
 }
@@ -90,6 +97,11 @@ table {
   margin-right: auto;
 }
 
+/* Cards */
+.card {
+  margin-top: 1rem;
+}
+
 
 /* Buttons */
 .button1 {
@@ -98,6 +110,8 @@ table {
   background: var(--clr-light);
   padding: 2rem;
   border-radius: 4px;
+  margin-top: 1 rem;
+  margin-bottom: 1rem;
 }
 
 .button1:hover, .button1:focus {
@@ -117,11 +131,6 @@ table {
   border-bottom: 2px solid rgba(0, 0, 0, 0.3);
   transition: 1s opacity;
 }
-
-
-
-
-
 
 /* Header + Footer */
 .page-header{
