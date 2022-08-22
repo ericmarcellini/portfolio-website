@@ -307,6 +307,12 @@ label {
   }
 }
 
+@media all and (max-width: 480px){
+ .profile{
+  max-width: 80%;
+ }
+}
+
 /* animations */
 
 @keyframes color-change {

@@ -204,7 +204,7 @@ text-align: right;
 /* NavBar */
 .navigation-list {
 list-style-type: none;
-margin-right: 2rem;
+/* margin-right: 2rem; */
 }
 
 .navigation-list li {
@@ -313,6 +313,22 @@ h1 {
 }
 h1 {
   font-size: 22px;
+}
+
+@media all and (max-width: 480px){
+  .profile{
+    max-width: 80%;
+    /* background-color: teal; */
+    align-items: center;
+  }
+
+  .mainImg {
+    float: inherit;
+    align-items: right;
+    margin-right: 0px;
+    max-width: 80%;
+    border-radius: 0%;
+    }
 }
 }
 
