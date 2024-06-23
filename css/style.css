@@ -3,8 +3,9 @@
     font-family: 'Source Sans Pro', sans-serif;
     --clr-light: #fff;
     --clr-dark: #303030;
-    --clr-accent2: #3b3b3b;
-    --clr-accent: #16e0bd;
+    /* --clr-accent2: #3b3b3b; */
+    --clr-accent: #0fa79b; /* Softer teal color */
+    --clr-accent2: #2ba38b; /* A slightly different shade for hover effect */
     font-size: 10px;
     box-sizing: border-box;
 }
@@ -104,26 +105,39 @@ table {
   margin-top: 1rem;
 }
 
+/* Skill Tags Container */
 #dev-skills {
   display: flex;
-  flex-flow: row wrap;
-  justify-content: flex-start;
-  padding: 1.5em;
+  flex-wrap: wrap;
+  justify-content: center; /* Center the tags horizontally */
+  gap: 1rem; /* Use gap for consistent spacing */
+  padding: 1.5rem;
   background: var(--clr-dark);
   color: var(--clr-accent2);
 }
 
+/* Individual Skill Tags */
 .devskills-tag {
-  margin: 0.3em;
-  padding: 0.5em;
-  flex-grow: 1;
-  max-width: 9em;
-  border-radius: 4px;
+  margin: 0.3rem;
+  padding: 0.5rem 1rem;
+  border-radius: 20px; /* More rounded corners for a modern look */
   background: var(--clr-accent2);
-  color: var(--clr-accent);
+  color: var(--clr-light);
   text-transform: uppercase;
-  font-size: 0.8em;
+  font-size: 0.9rem; /* Slightly increased font size */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  white-space: nowrap; /* Prevent tags from wrapping */
+  flex-grow: 0; /* Prevent tags from stretching */
 }
+
+/* Hover Effect */
+.devskills-tag:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+}
+
 
 .techstack{
   text-align: center;
@@ -134,33 +148,33 @@ table {
   margin-bottom: 12rem;
 }
 /* Buttons */
+/* Button Styles */
 .button1 {
   font: inherit;
-  font-size: 2rem;
-  background: var(--clr-light);
-  padding: 2rem;
-  border-radius: 4px;
-  margin-top: 1 rem;
+  font-size: 1.5rem; /* Reduced the font size for better alignment */
+  background: var(--clr-accent);
+  color: var(--clr-light);
+  padding: 1rem 2rem; /* Adjusted padding for better proportions */
+  border-radius: 8px; /* Slightly increased the border radius for a smoother look */
+  margin-top: 1rem;
   margin-bottom: 1rem;
+  border: none;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .button1:hover, .button1:focus {
+  background-color: var(--clr-accent2);
+  transform: translateY(-3px); /* Adds a subtle lifting effect */
+  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
   cursor: pointer;
-  opacity: 0.5;
 }
 
-.button, button {
-  border: none;
-  display: inline-block;
-  font-family: inherit;
-  background-color: var(--clr-accent);
-  color: var(--clr-dark);
-  text-decoration: none;
-  padding: 10px;
-  border-radius: 3px;
-  border-bottom: 2px solid rgba(0, 0, 0, 0.3);
-  transition: 1s opacity;
+.button1:active {
+  transform: translateY(0); /* Button returns to original position when clicked */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
+
 
 /* Header + Footer */
 .page-header{
@@ -206,26 +220,55 @@ table {
 
 /* Grid */
 /* start grid fallback */
-.grid__item {
-  display: inline-block;
-  width: 33%;
- }
-
- @supports (display: grid) {
+/* Grid System */
 .grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-gap: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
 }
 
 .grid__item {
-  background-color: #3b3b3b;
+  background-color: #2e2e2e; /* Slightly lighter than the original */
   padding: 1.5rem;
-  width: auto;
-}
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  flex: 1 1 calc(33.333% - 20px); /* Responsive column width */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-/* Form */
+.grid__item:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Fallback for older browsers */
+@supports (display: grid) {
+  .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+      gap: 20px;
+  }
+
+  .grid__item {
+      width: auto;
+  }
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .grid__item {
+      flex: 1 1 calc(50% - 20px);
+  }
+}
+
+@media (max-width: 480px) {
+  .grid__item {
+      flex: 1 1 100%;
+  }
+}
+
+
+/* Form
 form {
   text-align: center;
 }
@@ -280,7 +323,7 @@ label {
   h1 {
     font-size: 22px;
   }
-}
+} */
 
 
 /* MEDIA QUERIES */
@@ -363,4 +406,174 @@ label {
 
 .cloud-back {
   animation: 34s cloud-move-reverse infinite alternate linear;
+}
+
+/* Custom Button Styles for .btn-primary */
+.custom-btn {
+  position: relative;
+  display: inline-block;
+  background-color: #0fa79b; /* Custom background color */
+  color: #ffffff; /* Custom text color */
+  font-size: 1.5rem; /* Custom font size */
+  padding: 1rem 2rem; /* Custom padding */
+  border-radius: 12px; /* Custom border radius */
+  border: none; /* Remove default border */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Add box shadow */
+  transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+  overflow: hidden;
+  color: #ffffff; /* Ensure text color is white */
+}
+
+.custom-btn:hover, .custom-btn:focus {
+  background-color: #2ba38b; /* Custom hover background color */
+  transform: translateY(-3px); /* Lift effect on hover */
+  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2); /* Enhanced box shadow on hover */
+  cursor: pointer; /* Pointer cursor on hover */
+  color: #ffffff; /* Ensure text color remains white */
+}
+
+.custom-btn:active {
+  transform: translateY(0); /* Return to original position on click */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Original box shadow on click */
+  color: #ffffff; /* Ensure text color remains white */
+}
+
+.custom-btn::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 300%;
+  height: 300%;
+  background: rgba(255, 255, 255, 0.2);
+  transition: width 0.3s ease, height 0.3s ease, top 0.3s ease, left 0.3s ease;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1; /* Ensure it's below the text */
+}
+
+.custom-btn:hover::before {
+  width: 100%;
+  height: 100%;
+  top: 50%;
+  left: 50%;
+}
+
+.custom-btn span {
+  position: relative;
+  z-index: 2; /* Ensure text is above the pseudo-element */
+  color: #ffffff; /* Ensure text color is white */
+}
+
+.custom-btn:focus {
+  outline: none;
+}
+
+/* Ensuring compatibility with Bootstrap */
+.btn-primary.custom-btn {
+  background-color: #0fa79b;
+  border-color: #0fa79b;
+  color: #ffffff; /* Ensure text color is white */
+}
+
+.btn-primary.custom-btn:hover {
+  background-color: #2ba38b;
+  border-color: #2ba38b;
+  color: #ffffff; /* Ensure text color is white */
+}
+
+/* Custom Button Styles for .btn-secondary */
+.custom-btn-secondary {
+  position: relative;
+  display: inline-block;
+  background-color: #6c757d; /* Custom background color - muted blue */
+  color: #ffffff; /* Custom text color */
+  font-size: 1.5rem; /* Custom font size */
+  padding: 1rem 2rem; /* Custom padding */
+  border-radius: 12px; /* Custom border radius */
+  border: none; /* Remove default border */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Add box shadow */
+  transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+  overflow: hidden;
+}
+
+.custom-btn-secondary:hover, .custom-btn-secondary:focus {
+  background-color: #5a6268; /* Custom hover background color */
+  transform: translateY(-3px); /* Lift effect on hover */
+  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2); /* Enhanced box shadow on hover */
+  cursor: pointer; /* Pointer cursor on hover */
+}
+
+.custom-btn-secondary:active {
+  transform: translateY(0); /* Return to original position on click */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Original box shadow on click */
+}
+
+.custom-btn-secondary::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 300%;
+  height: 300%;
+  background: rgba(255, 255, 255, 0.2);
+  transition: width 0.3s ease, height 0.3s ease, top 0.3s ease, left 0.3s ease;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1; /* Ensure it's below the text */
+}
+
+.custom-btn-secondary:hover::before {
+  width: 100%;
+  height: 100%;
+  top: 50%;
+  left: 50%;
+}
+
+.custom-btn-secondary span {
+  position: relative;
+  z-index: 2; /* Ensure text is above the pseudo-element */
+  color: #ffffff; /* Ensure text color is white */
+}
+
+.custom-btn-secondary:focus {
+  outline: none;
+}
+
+/* Ensuring compatibility with Bootstrap */
+.btn-secondary.custom-btn-secondary {
+  background-color: #6c757d;
+  border-color: #6c757d;
+  color: #ffffff; /* Ensure text color is white */
+}
+
+.btn-secondary.custom-btn-secondary:hover {
+  background-color: #5a6268;
+  border-color: #5a6268;
+  color: #ffffff; /* Ensure text color is white */
+}
+
+/* Custom Badge Styles */
+.custom-badge {
+  background-color: #d3d3d3; /* Light gray background color */
+  color: #333333; /* Darker text color for contrast */
+  font-size: 1rem; /* Custom font size */
+  padding: 0.5rem 1rem; /* Custom padding */
+  border-radius: 12px; /* Custom border radius for pill shape */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Add subtle shadow */
+  transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+  display: inline-block; /* Ensure badges are inline-block */
+  margin: 0.3rem; /* Add margin for spacing */
+}
+
+.custom-badge:hover {
+  background-color: #b0b0b0; /* Slightly darker gray on hover */
+  transform: translateY(-3px); /* Lift effect on hover */
+  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2); /* Enhanced shadow on hover */
+  cursor: pointer; /* Pointer cursor on hover */
+}
+
+.custom-badge:active {
+  transform: translateY(0); /* Return to original position on click */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Original shadow on click */
 }
