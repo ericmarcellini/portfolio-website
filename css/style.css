@@ -117,14 +117,27 @@ table {
 }
 
 /* Individual Skill Tags */
+/* Skill Tags Container */
+/* Skill Tags Container */
+#dev-skills {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center; /* Center the tags horizontally */
+  gap: 1rem; /* Use gap for consistent spacing */
+  padding: 1.5rem;
+  background: var(--clr-dark);
+  color: var(--clr-accent2);
+}
+
+/* Individual Skill Tags */
 .devskills-tag {
   margin: 0.3rem;
-  padding: 0.5rem 1rem;
+  padding: 0.75rem 1.5rem; /* Increased padding for a larger button */
   border-radius: 20px; /* More rounded corners for a modern look */
-  background: var(--clr-accent2);
-  color: var(--clr-light);
+  background: #d3d3d3; /* Light gray background color */
+  color: #333333; /* Darker text color for contrast */
   text-transform: uppercase;
-  font-size: 0.9rem; /* Slightly increased font size */
+  font-size: 1.1rem; /* Increased font size */
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   white-space: nowrap; /* Prevent tags from wrapping */
@@ -133,6 +146,7 @@ table {
 
 /* Hover Effect */
 .devskills-tag:hover {
+  background-color: #b0b0b0; /* Slightly darker gray on hover */
   transform: translateY(-3px);
   box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
   cursor: pointer;
