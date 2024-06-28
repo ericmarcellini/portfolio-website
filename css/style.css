@@ -281,65 +281,6 @@ table {
   }
 }
 
-
-/* Form
-form {
-  text-align: center;
-}
-
-
-#contact-email,#contact-phone{
-  background-color: var(--clr-light);
-  width: 50%;
-  box-sizing: border-box;
-  border-radius: 4px;
-  margin-bottom: 1rem;
-}
-
-textarea {
-  background-color: var(--clr-light);
-  width: 50%;
-  height: 15em;
-  padding: 1.2em 2em;
-  box-sizing: border-box;
-  border-radius: 4px;
-  resize: none;
-}
-
-input[type=submit]{
-  font: inherit;
-  font-size: 2rem;
-  background: var(--clr-light);
-  padding: 1rem;
-  border-radius: 4px;
-  margin-top: 1rem;
-}
-
-label {
-  padding: 12px;
-  display: inline-block;
-  color: var(--clr-accent);
-  display: block;
-  font-size: 0.9em;
-  font-weight: 600;
-  margin: 0 0 1em 0;
-}
-
-@media all and (max-width: 500px) {
-  .grid {
-    grid-template-columns: 1fr;
-    grid-gap: 10px;
-  }
-  .grid__item:last-child {
-    grid-column: auto / auto;
-    grid-row: auto / auto;
-  }
-  h1 {
-    font-size: 22px;
-  }
-} */
-
-
 /* MEDIA QUERIES */
 @media all and (max-width: 500px) {
   .grid {
