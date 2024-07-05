@@ -161,6 +161,12 @@ table {
 .social-media{
   margin-bottom: 12rem;
 }
+
+.socials:hover{
+  transform: translateY(-3px); /* Lift effect on hover */
+  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2); /* Enhanced box shadow on hover */
+  cursor: pointer; /* Pointer cursor on hover */
+}
 /* Buttons */
 /* Button Styles */
 .button1 {
@@ -311,6 +317,18 @@ table {
  }
 }
 
+/* profile pic on handheld*/
+@media screen and (max-width: 768px) {
+  #mainimg {
+    float: none;
+    margin-right: 0;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 80%;
+    max-width: 300px;
+  }
+}
 /* animations */
 
 @keyframes color-change {
